@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        *{
+            margin-left: 100px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        h1 {
+            margin-left: 100px;
+            color: maroon;
+            font-size: 40px;
+        }
+        h2{
+            color: maroon;
+        }
+        .post{
+            margin-left: 50px;
+            margin-right: 900px;
+            background-color: rgb(243, 243, 138);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>posts</h1>
+    <div>
+        <% for (let i=0; i < posts.length ; i++) { %>
+            <div class="post">
+                <h3>
+                    <%= posts[i].id %>
+                </h3>
+                <h2>
+                    <%= posts[i].username %>
+                </h2>
+                <h3>
+                    <%= posts[i].content %>
+                </h3>
+            </div>
+        <% } %>
+    </div>
+    <a href="http://localhost:3000/posts/new">add post</a>
+</body>
+
+</html>
